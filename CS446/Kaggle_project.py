@@ -52,7 +52,7 @@ model.add(Dense(19, activation='sigmoid'))
 ###Loss function and LR specification
 
 opt = optimizers.SGD(lr=0.1,decay=1e-6)
-model.compile(loss='categorical_crossentropy',
+model.compile(loss='binary_crossentropy',
               optimizer=opt)
 reduce_lr = ReduceLROnPlateau(monitor='loss', factor=0.2,
                               patience=5, min_lr=0.001)
